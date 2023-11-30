@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Ordering</title>
+    <style>
+        body {
+            background-image: url(https://img.freepik.com/free-photo/top-view-vegan-fast-food-with-copy-space_23-2148290801.jpg?size=626&ext=jpg&ga=GA1.1.1943128850.1701280423&semt=ais);
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .menu-item {
+
+            display: grid;
+            
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+        
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body >
+    <header>
+        <h1>Online Food Ordering System</h1>
+    </header>
+
+     <h1>
+    <section id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <input type="checkbox" id="item1" name="items[]" value="Fries">
+                <label for="item1">Fries</label>
+            </li>
+            <li>
+                <input type="checkbox" id="item2" name="items[]" value="Pizza">
+                <label for="item2">Pizza</label>
+            </li>
+ <li>
+                <input type="checkbox" id="item2" name="items[]" value="Pasta">
+                <label for="item2">Pasta</label>
+            </li>
+            
+        </ul>
+    </section>
+</h1>
+
+    <section id="delivery-details">
+        <h2>Delivery Details</h2>
+        <form action="submit_order.php" method="post" >
+ 
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+ <h2></h2>
+            <label for="address">Address:</label>
+            <input type="address" name="address" required>
+ <h2></h2>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+<h2 ></h2>
+            <input type="submit" value="Place Order" >
+        </form>
+    </section>
+    <footer>
+         <a href="pay.html"><button type="button" id="submit">
+            Pay Now
+         </button></a>
+         </form>
+         
+    </footer>
+</body>
+</html>
